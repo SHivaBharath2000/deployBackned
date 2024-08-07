@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from "cors";
 //import teacherRouter from './Routing/teachers.js';
 import teacherRouter from './Routing/teacherRouter.js';
 //import studentRouter from './Routing/students/students.js';
@@ -6,13 +7,13 @@ import studentDBRouter from './Routing/studentsRouter.js';
 import connectToDb from './db-utils/mongo.connection.js';
 import mongooseConnect from './db-utils/mongoose-connection.js';
 import todosRouter from './Routing/todo.js';
-import cors from 'cors';
+
 
 const server=express();
 await connectToDb()
 await mongooseConnect()
 server.use(express.json()); 
-server.use(cors()) 
+server.use(cors());
 server.get("/",(req,res)=>{
     res.send("<h1>Welcome</h1>");
 })
