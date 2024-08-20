@@ -23,5 +23,5 @@ const connectToDb=async()=>{
         process.exit(1)
     }
 }
-export {client,db};
+export { db };
 export default connectToDb;

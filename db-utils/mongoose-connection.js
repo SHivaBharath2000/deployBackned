@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 
 
 //mongodb+srv://sivabharath:rjMOiulRXTPawoOb@cluster0.m9a8kj2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0:rjMOiulRXTPawoOb@cluster0.m9a8kj2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-const cloudCluster=process.env.DB_CLUSTER ||"cluster0.m9a8kj2.mongodb.net";
-const dbName =process.env.DB_NAME||"tamil-combined";
+const cloudCluster=process.env.DB_CLUSTER ||"localhost:27017";
+const dbName =process.env.DB_NAME||"";
 const dbuserName=process.env.DB_USER || ""
 const dbPassword=process.env.DB_PASSWORD || "";
 
