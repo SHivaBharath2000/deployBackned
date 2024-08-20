@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //students apis with DB connection
 import express from 'express';
 import { db} from '../db-utils/mongo.connection.js';
@@ -87,6 +87,4 @@ studentDBRouter.delete("/:studentId",async( req,res)=>{
         res.status(404).send({msg:"student not found"})
     }
 });
-
->>>>>>> origin/main
 export  default studentDBRouter
