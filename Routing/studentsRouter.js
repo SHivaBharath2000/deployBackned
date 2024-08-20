@@ -42,5 +42,4 @@ studentDBRouter.delete("/:studentId",async( req,res)=>{
         res.status(404).send({msg:"student not found"})
     }
 });
-
 export  default studentDBRouter
