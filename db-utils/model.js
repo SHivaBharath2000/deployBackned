@@ -54,6 +54,18 @@ const userSchema = new mongoose.Schema({
     type: "boolean",
     required: false,
   },
+  longURL:{
+    type:"string",
+    required: false,
+  },
+  shortURL:{
+    type:"string",
+    required: false,
+  },
+  urlid:{
+    type:"string",
+    required: false,
+  },
 });
 
 const userModel = new mongoose.model("user", userSchema, "users");

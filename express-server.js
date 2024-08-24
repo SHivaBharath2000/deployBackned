@@ -14,6 +14,8 @@ import loginRouter from './Routing/auth/login.js';
 import verifyUserRouter from './Routing/auth/verifyUser.js';
 import forgotRouter from './Routing/auth/forgot.js';
 import forgotPasswordRouter from './Routing/auth/forgotpassword.js';
+import URLrouter from './Routing/auth/urlshortner.js';
+import redirectRouter from './Routing/auth/redirect.js';
 
 
 
@@ -67,11 +69,13 @@ server.use(customMiddleware)
 server.use('/teachers',authApi,teacherRouter);
 server.use('/students',customMiddleware,studentDBRouter);
 server.use('/forgot',forgotRouter) 
+server.use('/URL-shortner',URLrouter)
 server.use('/forgotpassword',forgotPasswordRouter) 
 server.use('/verify-user',verifyUserRouter)
 server.use('/todos',todosRouter);
 server.use('/register',registerRouter);
 server.use('/login',loginRouter)
+server.use('/redirect',redirectRouter)
 
 const port=8000
 server.listen(port,()=>{
